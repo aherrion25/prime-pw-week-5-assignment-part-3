@@ -21,8 +21,35 @@ console.log(addToCollection('LIVE.LOVE.A$AP', 'ASAP Rocky', 2011));
 console.log(collection);
 console.table(collection);
 
-function showCollection(params) {
-    
+
+
+
+
+
+
+function showCollection(music) {
+    console.log('show collection', music);
+    for(let i = 0; i < music.length; i++){
+        let album = music[i];
+        console.log(album.title,);
+    }
 }
+console.log(showCollection(collection));
 
 
+
+
+
+
+
+
+function findByArtist(artistInput, collectionInput) {
+    for (let artist of collectionInput) {
+        if (artistInput === artist.artist){
+            console.log(artist.artist);
+         return artist;   
+        }
+    }
+}
+console.log(findByArtist('Method Man', collection));
+console.log(findByArtist('Aerosmith', collection));
