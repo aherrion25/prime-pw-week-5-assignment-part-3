@@ -31,7 +31,8 @@ function showCollection(music) {
     console.log('show collection', music);
     for(let i = 0; i < music.length; i++){
         let album = music[i];
-        console.log(album.title,);
+        console.log(album.title, album.artist, album.yearPublished);
+        return album.title, album.artist, album.yearPublished;
     }
 }
 console.log(showCollection(collection));
@@ -47,9 +48,10 @@ function findByArtist(artistInput, collectionInput) {
     for (let artist of collectionInput) {
         if (artistInput === artist.artist){
             console.log(artist.artist);
-         return artist;   
         }
     }
+    collection.push(artistInput);
+    return artistInput; 
 }
 console.log(findByArtist('Method Man', collection));
 console.log(findByArtist('Aerosmith', collection));
